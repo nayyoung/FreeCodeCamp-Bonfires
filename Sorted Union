@@ -1,0 +1,13 @@
+function uniteUnique(arr) {
+  var args = Array.prototype.slice.call(arguments),
+      flattened = args.reduce(function(a,b) {
+        return a.concat(b);
+      }),
+      final = [];
+  for (var i = 0; i < flattened.length; i++) {
+    if (final.indexOf(flattened[i]) === -1) {
+      final.push(flattened[i]);
+    }
+  }
+  return final;
+}
